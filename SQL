@@ -1,0 +1,136 @@
+USE jspdb;
+
+if exists (select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'PersonalMember')
+    drop table PersonalMember;
+
+CREATE TABLE  PersonalMember (
+	MemberId	   	    INT IDENTITY,
+	MemberAccount 	varchar(32), 
+	MemberPassword 	varchar(32), 
+	MemberName 		varchar(32), 
+	MemberShopId	varchar(32),
+	MemberAddress         varchar(64),
+	MemberEmail 		varchar(64), 
+	MemberTel  		varchar(15), 
+	MemberCredit	int, 
+	MemberBirth		datetime,
+	MemberImage		image,
+	MemberRegisterDate	datetime,
+	MemberUpdateTime	datetime,
+	VerificationCode	varchar(32),
+	LpginVerificationStatus	varchar(32),
+	primary key(MemberId)
+);          
+
+
+if exists (select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'PaymentInfo')
+    drop table PaymentInfo;
+
+CREATE TABLE  PaymentInfo (
+  MemberId	   	    INT IDENTITY,
+  MemberCredit	int, 
+  MemberCash	int, 
+  MemberBank	int,
+  MemberBankAccount	int,
+    
+); 
+
+if exists (select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'DeliveryInfo')
+    drop table DeliveryInfo;
+
+CREATE TABLE  DeliveryInfo (
+  PackageNo	int Primary Key, 
+  PackageAddress	varchar(64),
+  PackageStatus   varchar(32),
+  PackageDeliveryTime	datetime,
+  PackageOrderTime	datetime,
+  PackageToSellerTime	datetime,
+  Receiver varchar(32)
+    
+);     
+
+if exists (select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'OrderBean')
+    drop table OrderBean;
+
+CREATE TABLE  OrderBean (
+  OrderNo	int Primary Key, 
+  ItemNo	int, 
+  TotalPrice   int, 
+  PackageNo	int, 
+  ProductId	int, 
+  Quantity	int,
+  MemberId	int,
+  OrderDate	datetime,
+  MemberId	int,
+  InvoiceNo	int
+    
+);
+
+if exists (select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'OrderItem')
+    drop table OrderItem;
+
+CREATE TABLE  OrderItem (
+  ItemNo	int Primary Key, 
+  Quantity	int, 
+  UnitPrice   int, 
+  Discount	int, 
+  Discription	varchar(32), 
+    
+);
+
+if exists (select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'Product')
+    drop table Product;
+
+CREATE TABLE  Product (
+  ProductId	int Primary Key, 
+  ShopId	int, 
+  ProductName	varchar(64),
+  ProductQuantity	int,
+  ProductPrice	int,
+  ProductCost	int,
+  ProductDiscount	int,
+  ProductAddTime	datetime,
+  ProductupdateTime	datetime,
+  ProductCategory	varchar(64),
+  ProductClass	varchar(64),
+  ProductInfo	varchar(256),
+  ProductStatus	varchar(32),
+  ProductValue	varchar(64),
+  ProductImg1	image, 
+  ProductImg2	image,
+  ProductImg3	image,
+  ProductImg4	image,
+  ProductImg5	image,
+  ProductImg6	image,
+    
+);
+
+if exists (select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'SellerFinance')
+    drop table SellerFinance;
+
+CREATE TABLE  SellerFinance (
+  ShopId	int Primary Key, 
+  ShopAccount	varchar(64), 
+  ShopPwd	varchar(64), 
+  ShopBankName	varchar(64),
+  ShopBankNo	int,
+  ShopBankAccount	varchar(64),
+  ShopCountry	varchar(64),
+  ShopAuth	varchar(64),
+  
+);
+
+if exists (select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'SellerDetail')
+    drop table SellerDetail;
+
+CREATE TABLE  SellerDetail (
+  SellerName	varchar(32) Primary Key, 
+  Sellerid	varchar(64), 
+  SellerAddr	varchar(64), 
+  SellerBirth	datetime,
+  SellerEmail	varchar(64),
+  SellerTel	varchar(64),
+  SellerShopClass	varchar(64),
+  SellerValue	varchar(128),
+  
+);
