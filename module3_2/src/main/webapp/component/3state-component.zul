@@ -1,0 +1,10 @@
+<zk>
+<!--
+a example to use a custom component element 
+ -->
+	<div apply="org.zkoss.training.customize.ThreeStatesComposer">
+		<tristatetree id="tree1" width="400px" checkmark="true"/> 
+		<button id="print" label="Print"/>
+	</div>
+		
+</zk>

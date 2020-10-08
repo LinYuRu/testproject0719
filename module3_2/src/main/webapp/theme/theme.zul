@@ -1,0 +1,6 @@
+<zk>
+    <hlayout height="100%">
+        <apply templateURI="window.zul"/>
+        <apply templateURI="panel.zul"/>
+    </hlayout>
+</zk>

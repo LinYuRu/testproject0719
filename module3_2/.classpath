@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_261">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/JavaFrameworkJava11/apache-tomcat-9.0.12/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="C:/JavaFrameworkJava11/apache-tomcat-9.0.12/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/JDBC_Sqlserver/lib/ojdbc14-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/JDBC_Sqlserver/ojdbc-full/OJDBC-Full/ojdbc5.jar"/>
+	<classpathentry kind="lib" path="C:/JDBC_Sqlserver/ojdbc-full/OJDBC-Full/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/JDBC_Sqlserver/ojdbc-full/OJDBC-Full/ons.jar"/>
+	<classpathentry kind="lib" path="C:/JDBC_Sqlserver/ojdbc-full/OJDBC-Full/orai18n.jar"/>
+	<classpathentry kind="lib" path="C:/JDBC_Sqlserver/ojdbc-full/OJDBC-Full/simplefan.jar"/>
+	<classpathentry kind="lib" path="C:/JDBC_Sqlserver/ojdbc-full/OJDBC-Full/ucp.jar"/>
+	<classpathentry kind="lib" path="C:/JDBC_Sqlserver/ojdbc-full/OJDBC-Full/xdb6.jar"/>
+	<classpathentry kind="lib" path="C:/JDBC_Sqlserver/ojdbc-full/jstl-1.2.jar/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/JDBC_Sqlserver/lib/mail-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/JDBC_Sqlserver/lib/mssql-jdbc-7.2.2.jre8.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

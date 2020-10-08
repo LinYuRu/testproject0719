@@ -1,0 +1,34 @@
+<?link  rel="stylesheet" type="text/css" href="/css/common.css"?>
+<?link  rel="stylesheet" type="text/css" href="/css/custom.css"?>
+<zk>
+<!-- TODO, 2-4, add CSS class to make one button label red	-->
+	<style>
+		/* partial */
+<!-- TODO, 3, make all zk button CSS font size 20px -->
+	</style>
+	<div sclass="blockDisplay">
+		<div>
+			Default:
+			<button label="Button" />
+		</div>
+		<div>
+			partial:
+			<button label="Button" style="color:red" />
+		</div>
+		<div>
+			sclass:
+			<button label="Button" sclass="red" />
+		</div>
+		<div>
+			zclass:
+			<button label="Button" zclass="red" />
+		</div>
+		<separator bar="true" height="20px"/>
+		default:
+		<window border="normal" title="mytitle">content</window>
+		sclass:
+		<window border="normal" title="mytitle" sclass="red">content</window>
+		zclass: (incorrect usage)
+		<window border="normal" title="mytitle" zclass="red" closable="true">content</window>
+	</div>
+</zk>

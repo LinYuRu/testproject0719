@@ -1,0 +1,42 @@
+<zk>
+	<style>
+		.red {
+			color: red;
+		}
+<!-- TODO, 3, make the outer grid column label red -->
+	</style>
+	with descendants selector, you can apply CSS class on different
+	component for different affected scope
+	<grid><!--  sclass="red" -->
+		<columns sclass="red">
+			<column label="Col 1" />
+			<column label="Col 2" />
+		</columns>
+		<rows>
+			<row>
+				<cell>
+					<grid>
+						<columns>
+							<column label="Inner Col 1" />
+							<column label="Inner Col 2" />
+						</columns>
+						<rows>
+							<row>Inner Grid</row>
+						</rows>
+					</grid>
+				</cell>
+				<cell>
+					<grid>
+						<columns>
+							<column label="Inner Col 1" />
+							<column label="Inner Col 2" />
+						</columns>
+						<rows>
+							<row>Inner Grid</row>
+						</rows>
+					</grid>
+				</cell>
+			</row>
+		</rows>
+	</grid>
+</zk>

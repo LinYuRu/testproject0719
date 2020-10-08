@@ -1,0 +1,7 @@
+/**
+Common style used in this project.
+*/
+.blockDisplay > * {
+	display: block;
+	margin: 5px;
+}

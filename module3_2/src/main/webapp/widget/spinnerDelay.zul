@@ -1,0 +1,39 @@
+<zk xmlns:w="client" xmlns:h="native">
+<!--
+override a widget property 
+ -->
+	<h:h1>Requirement:</h:h1>
+<label multiline="true">
+1. fire onChange event without losing the focus
+2. delay onChange event firing instead of using instant=true
+</label>
+	<h:h1>default "instant" spinner (no delay)</h:h1>
+	<spinner instant="true" onChange='Clients.log("onChange instantly: " + event.getValue())'/>
+	<separator/>
+	<h:h1>spinner with 350 autoOnChangeDelay</h:h1>
+	<spinner w:autoOnChangeDelay="350" onChange='Clients.log("onChange only once after delay: " + event.getValue())'/>
+<script><![CDATA[
+/* afterLoad() registers a callback function, to ensure zk.override() is invoked after the target widget is loaded.
+*/
+zk.afterLoad('zul.inp', function() {
+	var exSpinner = {};
+	zk.override(zul.inp.Spinner.prototype, exSpinner ,{
+		_onChanging: function (timeout) {
+			//call original widget's method
+			exSpinner._onChanging.apply(this, arguments);
+			//check for delay and 
+			if(this.autoOnChangeDelay) {
+				//clear old timeout, if users quickly click multiple times during specified delay, it just fires once for the last clicking
+				if(this.autoOnChangeTimeout) {
+					clearTimeout(this.autoOnChangeTimeout);
+					delete this.autoOnChangeTimeout;
+				}
+				//start a timeout to send after the delay
+				this.autoOnChangeTimeout = setTimeout(
+					this.updateChange_.bind(this), this.autoOnChangeDelay);
+			}
+		}
+	});//zk.override
+});//zk/afterLoad
+]]></script>
+</zk>

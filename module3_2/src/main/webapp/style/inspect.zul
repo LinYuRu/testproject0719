@@ -1,0 +1,17 @@
+<?link  rel="stylesheet" type="text/css" href="/css/common.css"?>
+<zk>
+<div sclass="blockDisplay">
+	<button label="Button" />
+inspect combobox popup
+	<combobox>
+		<comboitem>Matthew</comboitem>
+		<comboitem>Mark</comboitem>
+		<comboitem>Luke</comboitem>
+		<comboitem>John</comboitem>
+	</combobox>
+	<window border="normal" title="mytitle"
+		closable="true">
+		content
+	</window>
+</div>
+</zk>

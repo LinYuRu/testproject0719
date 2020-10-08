@@ -1,0 +1,14 @@
+<language-addon>
+	<addon-name>widget</addon-name>
+	<version>1.0</version>
+	<language-name>xul/html</language-name>
+	<depends>zul</depends>
+
+
+	<component>
+		<component-name>mytextbox</component-name>
+		<extends>textbox</extends>
+		<widget-class>my.pkg.MyTextbox</widget-class>
+	</component>
+
+</language-addon>

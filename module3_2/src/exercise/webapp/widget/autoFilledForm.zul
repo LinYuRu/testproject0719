@@ -1,0 +1,19 @@
+<zk xmlns:h="native" xmlns:w="client">
+ 
+    <h:form action="autoFilledForm.zul"><!-- some browsers require a dummy form to trigger the password saving -->
+        <textbox id="username" name="name"/>
+        <textbox id="password" type="password" name="password"/>
+     
+        <button label="login"
+            w:onClick="updateLoginFields();"
+            onClick='
+                /*server side listener verifying the updated fields*/
+                Clients.showNotification(username.getValue()+"," + password.getValue());'
+            />
+    </h:form>
+ 
+<script type="text/javascript"><![CDATA[
+//TODO enfore updating the value to the server                                        
+                                        
+]]></script>
+</zk>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk xmlns="http://www.zkoss.org/2005/zk/config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zk/config http://www.zkoss.org/2005/zk/config/zk.xsd">
+	<!-- [Optional] Uncomment if you want to defines the application's name 
+		<preference> <name>org.zkoss.zk.ui.WebApp.name</name> <value>module3_2</value> 
+		</preference> -->
+	<!-- Turn on if you want to debug JavaScript. Once turned on, the uncompressed 
+		JavaScript files will be loaded. -->
+	<client-config>
+		<debug-js>true</debug-js>
+	</client-config>
+
+	<language-config>
+		<addon-uri>/WEB-INF/custom-addon.xml</addon-uri>
+	</language-config>
+	<library-property>
+		<name>org.zkoss.theme.preferred</name>
+		<value>mytheme</value>
+	</library-property>
+	<device-config>
+		<device-type>ajax</device-type>
+		<embed><![CDATA[
+			 <link rel="stylesheet" href="/module3_2/styles.css">
+		]]></embed>
+	</device-config>
+	<!--
+     -->
+</zk>

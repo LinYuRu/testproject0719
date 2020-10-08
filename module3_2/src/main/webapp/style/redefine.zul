@@ -1,0 +1,22 @@
+<?component name="button" extends="button" sclass="my-btn"?>
+<?component name="button2" extends="button" sclass="my-btn2"?>
+<zk>
+
+    <style>
+        .my-btn {
+            background-image: none;
+            background-color: lightBlue;
+        }
+        .my-btn2 {
+            background-image: none;
+            background-color: Blue;
+            color: yellow;
+        }
+    </style>
+
+    <button label="click" width="100px" height="50px"/>
+    <button label="click 2" width="100px" height="50px"/>
+    Button 2:
+    <button2 label="click 3" width="100px" height="50px"/>
+    <button2 label="click 4" width="100px" height="50px"/>
+</zk>

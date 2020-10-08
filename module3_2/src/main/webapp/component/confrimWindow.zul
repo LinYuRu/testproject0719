@@ -1,0 +1,6 @@
+<zk>
+	<window title="a standard window" closable="true" border="normal">
+	</window>
+	<window title="a closing confirm window" closable="true" border="normal" use="org.zkoss.training.customize.CloseConfirmWindow" >
+	</window>
+</zk>

@@ -1,0 +1,13 @@
+<zk xmlns:w="client">
+    requirement: disable nav close
+    <navbar orient="vertical" autoclose="false">
+        <nav label="nav 1" open="true" w:doClick_="zk.$void">
+            <navitem label="nav 1.1"/>
+            <navitem label="nav 1.2"/>
+        </nav>
+        <nav label="nav 2" open="true">
+            <navitem label="nav 2.1"/>
+            <navitem label="nav 2.2"/>
+        </nav>
+    </navbar>
+</zk>

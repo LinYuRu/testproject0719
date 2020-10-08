@@ -1,0 +1,18 @@
+<?component name="formattedLabel" class="org.zkoss.training.customize.FormattedLabel" ?>
+<zk>
+	An custom component with a custom attribute "format"
+	<groupbox>
+		<caption>basic usage</caption>
+		<formattedLabel format="%2.2f" value="100"></formattedLabel>
+	</groupbox>
+	<groupbox>
+		<caption>dynamic usage</caption>
+		<hlayout>
+		format: <textbox id="formatBox" value="%2.2f" onChange="resultLabel.format=self.value"></textbox>e.g. %3.4f
+		</hlayout>
+		<hlayout>
+		value: <textbox id="tBox" value="100" onChange="resultLabel.value=self.value"></textbox>
+		</hlayout>
+		<formattedLabel id="resultLabel" format="${formatBox.value}" value="${tBox.value}"></formattedLabel>
+	</groupbox>
+</zk>

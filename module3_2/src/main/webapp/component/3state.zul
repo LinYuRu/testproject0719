@@ -1,0 +1,8 @@
+<?page title="tree" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<style src="~./triState.css"/>
+	<div apply="org.zkoss.training.customize.ThreeStatesComposer" >
+		<tree id="tree1" width="400px" checkmark="true" use="org.zkoss.training.customize.TriStateTree"/>
+		<button id="print" label="Print"/>
+	</div>
+</zk>

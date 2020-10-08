@@ -1,0 +1,52 @@
+<panel title="Panel" border="normal" collapsible="true" maximizable="true" minimizable="true" closable="true" hflex="1" vflex="1">
+    <panelchildren>
+        <vlayout height="100%" spacing="0">
+            <menubar width="100%">
+                <menuitem label="Menu"/>
+                <menu label="File">
+                    <menupopup>
+                        <menuitem label="View"/>
+                        <menuitem iconSclass="z-icon-save" label="Save"/>
+                    </menupopup>
+                </menu>
+            </menubar>
+            <borderlayout vflex="1">
+                <west width="200px" splittable="true" collapsible="true" title="Help">
+                    <vlayout>
+                        <textbox hflex="1" placeholder="Placeholder"/>
+                        <timebox hflex="1" format="hh:mm:ss a" value="@init(vm.timeboxValue)"/>
+                        <bandbox hflex="1">
+                            <bandpopup>
+                                Any content
+                            </bandpopup>
+                        </bandbox>
+                        <button label="Default"/>
+                        <button label="Disabled" disabled="true"/>
+                    </vlayout>
+                </west>
+                <center>
+                    <vlayout>
+                        <calendar/>
+                        ${vm.loremIpsum}
+                    </vlayout>
+                </center>
+                <south height="150px" splittable="true" collapsible="true" title="Tag">
+                    <hlayout valign="middle">
+                        Default
+                        <chosenbox model="${vm.chosenModel}" width="350px"/>
+                    </hlayout>
+                </south>
+            </borderlayout>
+        </vlayout>
+    </panelchildren>
+    <toolbar>
+        <toolbarbutton label="Export"/>
+        <combobutton label="Contact" mold="toolbar">
+            <menupopup>
+                <menuitem label="Phone"/>
+                <menuitem label="Email"/>
+                <menuitem label="Fax"/>
+            </menupopup>
+        </combobutton>
+    </toolbar>
+</panel>

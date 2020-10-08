@@ -1,0 +1,18 @@
+<!--
+https://www.zkoss.org/wiki/ZK_Client-side_Reference/Language_Definition 
+ -->
+<language-addon>
+	<addon-name>custom</addon-name>
+	<language-name>xul/html</language-name>
+    <!-- include javascript and css in application-scope -->
+	<!-- custom Dropupload -->
+	<javascript src="/widget/customMessages.js" />
+	<javascript src="/widget/customDropupload.js" />
+    <component>
+        <component-name>tristatetree</component-name>
+        <extends>tree</extends>
+        <component-class>org.zkoss.training.customize.TriStateTree</component-class>
+    </component>
+    <stylesheet href="~./triState.css"/>
+	 <!-- https://www.zkoss.org/wiki/ZK_Developer's_Reference/UI_Patterns/Communication/Inter-Application_Communication#Web_Resources_from_Classpath -->
+</language-addon>

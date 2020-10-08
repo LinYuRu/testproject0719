@@ -1,0 +1,10 @@
+<zk>
+<label multiline="true">
+* override a widget method
+* custom js code is applied in the whole system with custom-addon.xml 
+</label>
+	<image id="img" />
+	Upload your hot shot: (no multiple file allowed)
+	<dropupload content="Drop Here" detection="none"
+		onUpload="img.setContent(event.media)" />
+</zk>

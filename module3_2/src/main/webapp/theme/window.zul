@@ -1,0 +1,76 @@
+<window border="normal" title="Window" maximizable="true" minimizable="true" closable="true" hflex="1" vflex="1">
+    <vlayout spacing="10px" height="100%">
+        <hlayout width="100%" vflex="1">
+            <tabbox tabscroll="true" hflex="1" vflex="1">
+                <tabs>
+                    <tab label="New"/>
+                    <tab label="All"/>
+                    <tab label="Done"/>
+                </tabs>
+                <tabpanels>
+                    <tabpanel>
+                        Updates
+                        <groupbox>
+                            <caption iconSclass="z-icon-volume-up" label="Caption"/>
+                            ${vm.loremIpsum}
+                        </groupbox>
+                    </tabpanel>
+                    <tabpanel/>
+                    <tabpanel/>
+                </tabpanels>
+            </tabbox>
+            <tabbox mold="accordion" hflex="1" vflex="1">
+                <tabs>
+                    <tab label="Chart" closable="true"/>
+                    <tab label="Mail" closable="true"/>
+                    <tab label="File" closable="true"/>
+                </tabs>
+                <tabpanels>
+                    <tabpanel>
+                        <vlayout>
+                            <progressmeter width="100%" value="70"/>
+                            <colorbox value="#FFCC00"/>
+                        </vlayout>
+                    </tabpanel>
+                    <tabpanel/>
+                    <tabpanel/>
+                </tabpanels>
+            </tabbox>
+        </hlayout>
+        <groupbox vflex="1">
+            <listbox multiple="true" checkmark="true" mold="paging" pageSize="4" vflex="1">
+                <listhead>
+                    <listheader label="Name"/>
+                    <listheader label="Location"/>
+                </listhead>
+                <listgroup label="group expanded" open="true"/>
+                <listitem>
+                    <listcell label="Cindy"/>
+                    <listcell label="London"/>
+                </listitem>
+                <listitem>
+                    <listcell label="Mandy"/>
+                    <listcell label="Paris"/>
+                </listitem>
+                <listgroup label="group collapsed" open="false"/>
+                <listitem>
+                    <listcell label="Mike"/>
+                    <listcell label="Tokyo"/>
+                </listitem>
+                <listitem>
+                    <listcell label="Ron"/>
+                    <listcell label="Detroit"/>
+                </listitem>
+                <listgroup label="group expanded" open="true"/>
+                <listitem>
+                    <listcell label="Bob"/>
+                    <listcell label="Munich"/>
+                </listitem>
+                <listitem>
+                    <listcell label="John"/>
+                    <listcell label="Berlin"/>
+                </listitem>
+            </listbox>
+        </groupbox>
+    </vlayout>
+</window>
